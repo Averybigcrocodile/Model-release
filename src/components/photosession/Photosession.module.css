@@ -1,0 +1,22 @@
+.photosession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.inputs {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.inputs input {
+    min-width: 300px;
+}
+.inputs span {
+    margin-right: 10px;
+}
+.btn {
+    padding: 3px 15px;
+}

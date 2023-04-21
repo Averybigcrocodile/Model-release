@@ -1,0 +1,33 @@
+.start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(99, 99, 99);
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.start_btn {
+    width: 80px;
+    height: 80px;
+    color: aliceblue;
+}
+.start_text {
+    color: aliceblue;
+    text-align: center;
+    text-decoration: none;
+}
+.start:hover {
+    opacity: 0.8;
+}
+.start:hover .start_btn, .start:hover .start_text {
+    text-shadow: 0px 0px 10px rgb(251, 251, 251);
+    transition: 0.3s;
+}
+a {
+    text-decoration: none;
+}

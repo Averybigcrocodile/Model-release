@@ -1,0 +1,22 @@
+.photographer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.inputs {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.inputs span {
+    margin-right: 10px;
+}
+.inputs input {
+    min-width: 300px;
+}
+.btn {
+    padding: 3px 15px;
+}

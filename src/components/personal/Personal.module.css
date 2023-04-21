@@ -1,0 +1,43 @@
+.personal__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 100%;
+    background-color: blanchedalmond;
+}
+.personal__info_block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(127, 116, 103);
+}
+.personal__info_block div, .personal__info_md div, .date_and_sings div {
+    margin: 20px;
+}
+.personal__info_md {
+    display: flex;
+    justify-content: space-between;
+}
+.personal__photo {
+    width: 200px;
+    height: 300px;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.personal__photo img {
+    max-width: 100%;
+    object-fit: cover;
+}
+.date_and_sings {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sing img {
+    max-width: 70px;
+}

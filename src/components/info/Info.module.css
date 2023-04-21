@@ -1,0 +1,28 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    max-width: 600px;
+    text-align: justify;
+    text-indent: 20px;
+}
+.info p {
+    margin: 0px;
+}
+.info span {
+
+}
+.btn {
+    margin-top: 20px;
+    padding: 3px 15px;
+}
+.names {
+    text-decoration: underline;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+.hide_on_click {
+    display: block;
+}
