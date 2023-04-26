@@ -64,7 +64,7 @@ const Sign = ({ signPhChange, signMdChange }) => {
             signMdChange,
           },
         }}
-        className={cn(styles.sign_btn)}
+        className={cn(styles.btn)}
         onClick={handleClick}
       >
         Далі

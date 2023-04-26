@@ -1,34 +1,41 @@
 .myRelease {
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
 }
 .personal__info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    max-width: 100%;
-    background-color: blanchedalmond;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 10px;
 }
-.personal__info_block {
-    width: 100%;
+.info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(127, 116, 103);
+    align-items: flex-start;
 }
-.personal__info_block div, .personal__info_md div, .date_and_sings div {
-    margin: 20px;
-}
-.personal__info_md {
+.personal__md {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+}
+.personal__md_info {
+    margin: 0 20px;
+}
+.personal__info_shoot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
 }
 .personal__photo {
-    width: 200px;
-    height: 300px;
-    background-color: azure;
+    width: 120px;
+    height: 160px;
+    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,5 +51,22 @@
     justify-content: space-between;
 }
 .sing img {
-    max-width: 70px;
+    max-width: 100px;
+}
+.date, .sing {
+    margin: 20px;
+}
+.sing {
+    display: flex;
+    align-items: center;
+}
+.btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.hide_on_save {
+    visibility: visible;
 }

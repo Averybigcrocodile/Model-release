@@ -9,6 +9,7 @@ body {
   align-items: center;
   justify-content: center;
   list-style: none;
+  background-color: rgb(55, 58, 60);
 }
 
 a {
@@ -18,4 +19,8 @@ a {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h2 {
+  margin: 20px 0;
 }

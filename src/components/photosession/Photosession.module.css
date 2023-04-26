@@ -1,4 +1,8 @@
 .photosession {
+    background-color: rgb(254, 254, 254);
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,10 +17,16 @@
 }
 .inputs input {
     min-width: 300px;
+    border-radius: 5px;
 }
 .inputs span {
     margin-right: 10px;
 }
 .btn {
     padding: 3px 15px;
+    color: black;
+}
+.btn:hover {
+    opacity: 0.5;
+    transition: 0.7s;
 }

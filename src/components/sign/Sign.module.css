@@ -4,8 +4,14 @@
     align-items: center;
     justify-content: space-between;
     margin: 20px;
+    background-color: white;
 }
-.sign_btn {
-    margin: 10px 0;
+.btn {
+    margin: 20px;
     padding: 3px 15px;
+    color: black;
+}
+.btn:hover {
+    opacity: 0.5;
+    transition: 0.7s;
 }

@@ -14,7 +14,7 @@ const Photographer = ({ nameChange, phoneChange }) => {
 
   return (
     <div className={cn(styles.photographer)}>
-      <h1>Інформація про фотографа</h1>
+      <h2>Інформація про фотографа</h2>
       <div className={cn(styles.inputs)}>
         <span>Ім'я та прізвище:</span>
         <input

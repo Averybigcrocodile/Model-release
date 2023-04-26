@@ -41,7 +41,7 @@ const Model = ({
 
   return (
     <div className={cn(styles.model)}>
-      <h1>Інформація про модель</h1>
+      <h2>Інформація про модель</h2>
       <div className={cn(styles.inputs)}>
         <span>Завантажити фото:</span>
         <input

@@ -19,7 +19,7 @@ const Photosession = ({
   };
   return (
     <div className={cn(styles.photosession)}>
-      <h1>Інформація про фотосесію</h1>
+      <h2>Інформація про фотосесію</h2>
       <div className={cn(styles.inputs)}>
         <span>Назва:</span>
         <input

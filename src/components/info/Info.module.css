@@ -1,22 +1,26 @@
 .info {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 20px;
+    margin: 0 20px;
     max-width: 600px;
     text-align: justify;
     text-indent: 20px;
 }
 .info p {
     margin: 0px;
-}
-.info span {
-
+    font-size: 12px;
 }
 .btn {
-    margin-top: 20px;
-    padding: 3px 15px;
+    color: black;
+}
+.btn:hover {
+    opacity: 0.5;
+    transition: 0.7s;
 }
 .names {
     text-decoration: underline;
