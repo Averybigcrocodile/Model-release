@@ -1,0 +1,19 @@
+{
+    "start": {
+      "createModelRelease": "Create model release"
+    },
+    "photosession": {
+      "info": "Information about the photosession",
+      "name": "Name",
+      "place": "Place",
+      "date": "Date",
+      "next": "Next"
+    },
+    "photographer": {
+      "info": "Information about the photographer",
+      "name": "Name",
+      "phone": "Phone",
+      "next": "Next"
+    }
+  }
+  

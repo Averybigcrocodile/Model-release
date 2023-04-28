@@ -1,5 +1,6 @@
 import cn from "classnames";
 import styles from "./MainPage.module.css";
+import styles2 from "../../index.module.css";
 import MyRelease from "../form/MyRelease";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
@@ -41,7 +42,9 @@ const MainPage = ({
 
   return (
     <div id="myForm" className={cn(styles.personal__info)}>
-      <MyRelease namePh={namePh} nameMd={nameMd} />
+      <div className={cn(styles.release)}>
+        <MyRelease namePh={namePh} nameMd={nameMd} />
+      </div>
 
       <div className={cn(styles.info)}>
         <div className={cn(styles.personal__md)}>
@@ -49,21 +52,21 @@ const MainPage = ({
             <img src={photoMd} alt="Фото моделі" />
           </div>
           <div className={cn(styles.personal__md_info)}>
-            <div>Модель: {nameMd}</div>
-            <div>Дата народження: {dateOfBirthMd}</div>
-            <div>Місто: {cityMd}</div>
-            <div>Адреса: {adressMd}</div>
-            <div>Серія та номер паспорту: {passportMd}</div>
-            <div>Телефон: {phoneMd}</div>
+            <span>Модель: {nameMd}</span>
+            <span>Дата народження: {dateOfBirthMd}</span>
+            <span>Місто: {cityMd}</span>
+            <span>Адреса: {adressMd}</span>
+            <span>Серія та номер паспорту: {passportMd}</span>
+            <span>Телефон: {phoneMd}</span>
           </div>
         </div>
 
         <div className={cn(styles.personal__info_shoot)}>
-          <div>Назва фотосесії: {nameOfShoot}</div>
-          <div>Дата фотосесії: {dateOfShoot}</div>
-          <div>Місце фотосесії: {placeOfShoot}</div>
-          <div>Фотограф: {namePh}</div>
-          <div>Телефон: {phonePh}</div>
+          <span>Назва фотосесії: {nameOfShoot}</span>
+          <span>Дата фотосесії: {dateOfShoot}</span>
+          <span>Місце фотосесії: {placeOfShoot}</span>
+          <span>Фотограф: {namePh}</span>
+          <span>Телефон: {phonePh}</span>
         </div>
       </div>
 
@@ -78,7 +81,10 @@ const MainPage = ({
       </div>
 
       <div className={cn(styles.btn)}>
-        <button className={cn(styles.hide_on_save)} onClick={savePageAsImage}>
+        <button
+          className={cn(styles.hide_on_save, styles2.btn)}
+          onClick={savePageAsImage}
+        >
           Зберегти
         </button>
       </div>

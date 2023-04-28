@@ -9,18 +9,11 @@
     margin: 0 20px;
     max-width: 600px;
     text-align: justify;
-    text-indent: 20px;
 }
 .info p {
     margin: 0px;
-    font-size: 12px;
-}
-.btn {
-    color: black;
-}
-.btn:hover {
-    opacity: 0.5;
-    transition: 0.7s;
+    font-size: 13px;
+    text-indent: 20px;
 }
 .names {
     text-decoration: underline;

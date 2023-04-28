@@ -6,12 +6,18 @@
     margin: 20px;
     background-color: white;
 }
-.btn {
-    margin: 20px;
-    padding: 3px 15px;
-    color: black;
+
+.sign_div {
+    border: 1px solid black;
 }
-.btn:hover {
+
+.sign_btn {
+ border: none;
+ background-color: white;
+ cursor: pointer;
+ margin-top: 20px;
+}
+.sign_btn:hover {
     opacity: 0.5;
-    transition: 0.7s;
+    transition: 0.2s;
 }

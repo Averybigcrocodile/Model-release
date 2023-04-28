@@ -1,5 +1,6 @@
 import cn from "classnames";
 import styles from "./Sign.module.css";
+import styles2 from "../../index.module.css";
 import React, { useState, useRef } from "react";
 import SignatureCanvas from "react-signature-canvas";
 import { Link } from "react-router-dom";
@@ -36,23 +37,32 @@ const Sign = ({ signPhChange, signMdChange }) => {
 
   return (
     <div className={cn(styles.sign)}>
-      <h2>Підпис фотографа:</h2>
-      <SignatureCanvas
-        canvasProps={{ width: 500, height: 200 }}
-        penColor="black"
-        ref={canvasRefPh}
-        onEnd={handleSavePh}
-      />
+      <div className={cn(styles2.label)}>
+        <h2>Photographer's signature / Підпис фотографа</h2>
+      </div>
+      <div className={cn(styles.sign_div)}>
+        <SignatureCanvas
+          canvasProps={{ width: 500, height: 400 }}
+          penColor="black"
+          ref={canvasRefPh}
+          onEnd={handleSavePh}
+        />
+      </div>
+
       <button onClick={handleClearPh} className={cn(styles.sign_btn)}>
         Clear
       </button>
-      <h2>Підпис моделі:</h2>
-      <SignatureCanvas
-        canvasProps={{ width: 500, height: 200 }}
-        penColor="black"
-        ref={canvasRefMd}
-        onEnd={handleSaveMd}
-      />
+      <div className={cn(styles2.label)}>
+        <h2>Model signature / Підпис моделі</h2>
+      </div>
+      <div className={cn(styles.sign_div)}>
+        <SignatureCanvas
+          canvasProps={{ width: 500, height: 400 }}
+          penColor="black"
+          ref={canvasRefMd}
+          onEnd={handleSaveMd}
+        />
+      </div>
       <button onClick={handleClearMd} className={cn(styles.sign_btn)}>
         Clear
       </button>
@@ -64,10 +74,10 @@ const Sign = ({ signPhChange, signMdChange }) => {
             signMdChange,
           },
         }}
-        className={cn(styles.btn)}
+        className={cn(styles2.btn)}
         onClick={handleClick}
       >
-        Далі
+        Next
       </Link>
     </div>
   );

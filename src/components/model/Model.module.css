@@ -1,5 +1,4 @@
 .model {
-    margin: 50px;
     padding: 20px;
     border-radius: 10px;
     background-color: white;
@@ -8,25 +7,25 @@
     align-items: center;
     justify-content: space-between;
 }
-.inputs {
-    margin: 10px;
+.preview {
+    width: 100px;
+    height: 200px;
+}
+.preview img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+.addPhoto {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content:flex-start
 }
-.inputs input {
-    min-width: 300px;
-    border-radius: 5px;
+.inputs {
+    display: flex;
+    flex-direction: row;
 }
-.inputs span {
-    margin-right: 10px;
-}
-.btn {
-    padding: 3px 15px;
-    color: black;
-}
-.btn:hover {
-    opacity: 0.5;
-    transition: 0.7s;
+.input {
+    margin: 10px;
 }

@@ -1,11 +1,14 @@
 import cn from "classnames";
 import styles from "./Photographer.module.css";
+import styles2 from "../../index.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Photographer = ({ nameChange, phoneChange }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const { t } = useTranslation();
 
   const handleClick = () => {
     nameChange(name);
@@ -13,38 +16,42 @@ const Photographer = ({ nameChange, phoneChange }) => {
   };
 
   return (
-    <div className={cn(styles.photographer)}>
-      <h2>Інформація про фотографа</h2>
-      <div className={cn(styles.inputs)}>
-        <span>Ім'я та прізвище:</span>
-        <input
-          className={cn(styles.photographer__name)}
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+    <div>
+      <div className={cn(styles2.label)}>
+        <h2>{t("photographer.info")}</h2>
       </div>
-      <div className={cn(styles.inputs)}>
-        <span>Телефон:</span>
-        <input
-          type="text"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
+      <div className={cn(styles.photographer)}>
+        <div className={cn(styles2.inputs)}>
+          <span>{t("photographer.name")}:</span>
+          <input
+            className={cn(styles.photographer__name)}
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className={cn(styles2.inputs)}>
+          <span>{t("photographer.phone")}:</span>
+          <input
+            type="text"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+        </div>
+        <Link
+          to={{
+            pathname: "/model",
+            state: {
+              nameChange,
+              phoneChange,
+            },
+          }}
+          className={cn(styles2.btn)}
+          onClick={handleClick}
+        >
+          {t("photosession.next")}
+        </Link>
       </div>
-      <Link
-        to={{
-          pathname: "/model",
-          state: {
-            nameChange,
-            phoneChange,
-          },
-        }}
-        className={cn(styles.btn)}
-        onClick={handleClick}
-      >
-        Далі
-      </Link>
     </div>
   );
 };
