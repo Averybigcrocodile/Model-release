@@ -3,6 +3,7 @@ import styles from "./Model.module.css";
 import styles2 from "../../index.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Model = ({
   photoChange,
@@ -20,6 +21,7 @@ const Model = ({
   const [passport, setPassport] = useState("");
   const [phone, setPhone] = useState("");
   const [img, setImg] = useState(null);
+  const { t } = useTranslation();
 
   const handleClick = () => {
     photoChange(img);
@@ -42,6 +44,7 @@ const Model = ({
 
   const handleCameraClick = () => {
     const video = document.createElement("video");
+    video.style.width = "200px";
 
     navigator.mediaDevices
       .getUserMedia({ video: true })
@@ -69,51 +72,59 @@ const Model = ({
     };
 
     const captureBtn = document.createElement("button");
-    captureBtn.innerText = "Зробити фото";
+    captureBtn.innerText = "Click";
     captureBtn.onclick = takePhoto;
 
     const cameraContainer = document.createElement("div");
     cameraContainer.appendChild(video);
     cameraContainer.appendChild(captureBtn);
+    cameraContainer.style.display = "flex";
+    cameraContainer.style.flexDirection = "column";
 
     const modal = document.createElement("div");
     modal.classList.add(styles2.modal);
     modal.onclick = () => modal.remove();
+
     modal.appendChild(cameraContainer);
 
-    document.body.appendChild(modal);
+    document.querySelector(`.${styles.addPhoto}`).appendChild(modal);
   };
 
   return (
     <div>
       <div className={cn(styles2.label)}>
-        <h2>Information about the model</h2>
+        <h2>{t("model.info")}</h2>
       </div>
 
       <div className={cn(styles.model)}>
-        <div className={cn(styles2.inputs, styles.inputs)}>
+        <div className={cn(styles2.inputs)}>
           {img ? (
             <div className={cn(styles.preview)}>
               <img src={img} alt="preview" />
             </div>
           ) : (
             <div className={cn(styles.addPhoto)}>
-              <label htmlFor="input__file">
-                <input
-                  type="file"
-                  accept="img/*"
-                  onChange={handleImgChange}
-                  id="input__file"
-                  className={cn(styles.input)}
-                />
-              </label>
-              <button onClick={handleCameraClick}>Take a photo</button>
+              <input
+                type="file"
+                accept="img/*"
+                onChange={handleImgChange}
+                id="input__file"
+                className={cn(styles.input)}
+              />
+              <div>
+                <label htmlFor="input__file" className={cn(styles.input_label)}>
+                  {t("model.addphoto")}
+                </label>
+              </div>
+              <div onClick={handleCameraClick} className={cn(styles.takePhoto)}>
+                {t("model.photo")}
+              </div>
             </div>
           )}
         </div>
 
         <div className={cn(styles2.inputs)}>
-          <span>Name:</span>
+          <span>{t("model.name")}:</span>
           <input
             type="text"
             value={name}
@@ -122,7 +133,7 @@ const Model = ({
         </div>
 
         <div className={cn(styles2.inputs)}>
-          <span>Date of birth:</span>
+          <span>{t("model.date")}:</span>
           <input
             type="text"
             value={dateOfBirth}
@@ -130,7 +141,7 @@ const Model = ({
           />
         </div>
         <div className={cn(styles2.inputs)}>
-          <span>City:</span>
+          <span>{t("model.city")}:</span>
           <input
             type="text"
             value={city}
@@ -138,7 +149,7 @@ const Model = ({
           />
         </div>
         <div className={cn(styles2.inputs)}>
-          <span>Adress:</span>
+          <span>{t("model.adress")}:</span>
           <input
             type="text"
             value={adress}
@@ -146,7 +157,7 @@ const Model = ({
           />
         </div>
         <div className={cn(styles2.inputs)}>
-          <span>Passport series and number:</span>
+          <span>{t("model.passport")}:</span>
           <input
             type="text"
             value={passport}
@@ -154,7 +165,7 @@ const Model = ({
           />
         </div>
         <div className={cn(styles2.inputs)}>
-          <span>Phone:</span>
+          <span>{t("model.phone")}:</span>
           <input
             type="text"
             value={phone}
@@ -177,7 +188,7 @@ const Model = ({
           className={cn(styles2.btn)}
           onClick={handleClick}
         >
-          Next
+          {t("model.next")}
         </Link>
       </div>
     </div>

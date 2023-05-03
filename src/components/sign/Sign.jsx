@@ -4,12 +4,15 @@ import styles2 from "../../index.module.css";
 import React, { useState, useRef } from "react";
 import SignatureCanvas from "react-signature-canvas";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Sign = ({ signPhChange, signMdChange }) => {
   const [signaturePh, setSignaturePh] = useState(null);
   const [signatureMd, setSignatureMd] = useState(null);
   const canvasRefPh = useRef(null);
   const canvasRefMd = useRef(null);
+
+  const { t } = useTranslation();
 
   const handleClearPh = () => {
     canvasRefPh.current.clear();
@@ -38,7 +41,7 @@ const Sign = ({ signPhChange, signMdChange }) => {
   return (
     <div className={cn(styles.sign)}>
       <div className={cn(styles2.label)}>
-        <h2>Photographer's signature / Підпис фотографа</h2>
+        <h2>{t("sign.ph")}</h2>
       </div>
       <div className={cn(styles.sign_div)}>
         <SignatureCanvas
@@ -50,10 +53,10 @@ const Sign = ({ signPhChange, signMdChange }) => {
       </div>
 
       <button onClick={handleClearPh} className={cn(styles.sign_btn)}>
-        Clear
+        {t("sign.clear")}
       </button>
       <div className={cn(styles2.label)}>
-        <h2>Model signature / Підпис моделі</h2>
+        <h2>{t("sign.md")}</h2>
       </div>
       <div className={cn(styles.sign_div)}>
         <SignatureCanvas
@@ -64,7 +67,7 @@ const Sign = ({ signPhChange, signMdChange }) => {
         />
       </div>
       <button onClick={handleClearMd} className={cn(styles.sign_btn)}>
-        Clear
+        {t("sign.clear")}
       </button>
       <Link
         to={{
@@ -77,7 +80,7 @@ const Sign = ({ signPhChange, signMdChange }) => {
         className={cn(styles2.btn)}
         onClick={handleClick}
       >
-        Next
+        {t("sign.next")}
       </Link>
     </div>
   );

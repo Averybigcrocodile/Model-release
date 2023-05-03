@@ -3,17 +3,54 @@
       "createModelRelease": "Create model release"
     },
     "photosession": {
-      "info": "Information about the photosession",
-      "name": "Name",
+      "info": "Photosession",
+      "name": "The name of the photo shoot",
       "place": "Place",
       "date": "Date",
       "next": "Next"
     },
     "photographer": {
-      "info": "Information about the photographer",
-      "name": "Name",
+      "info": "Photographer",
+      "name": "Photographer's name",
       "phone": "Phone",
       "next": "Next"
+    },
+    "model": {
+      "info": "Model",
+      "photo": "Take a photo",
+      "addphoto": "Add photo",
+      "name": "Model's name",
+      "date": "Date of birth",
+      "city": "City",
+      "adress": "Adress",
+      "passport": "Passport series and number",
+      "phone": "Phone",
+      "next": "Next"
+    },
+    "info": {
+      "name": "Agreement",
+      "text1": "\tIn exchange for a valuable and compensatory consideration, which by signing this document is recognized as sufficient and received, I, the Model, give to the Photographer, his/her legal representatives and successors, those on whose behalf the Photographer acts, as well as those acting on his/her behalf and with his/her permission, the exclusive and unrestricted right and permission to copyright, in his/her name, and to use, reuse, publish and republish the portraits and other pictures of me or those pictures in which depicted/portrayed by the Photographer (Photographs), in whole or in part, as part of a composite image or in altered form and content, without limitation in the changes permitted to the Photograph.",
+      "text2": "\n\tPhotographs are allowed to be captioned with both my name and a fictitious name, reproductions may be printed in color or monochrome, using the Photographer's equipment or any other equipment, and distributed in any way, for the purpose of illustration, product promotion, as art, in publications, advertising, commerce, publishing and for any other purposes. I also grant the right to use the printed materials in connection with the above purposes. By signing this document, I waive all rights to review and approve the finished product or products, as well as advertising copy and other related materials, or the very purpose for which the photos are used.\n\tBy signing this document, I grant the Photographer, the persons employed by the Photographer, his legal representatives and successors, as well as other persons who are subordinate to the Photographer, or those whose tasks he performs, the stipulated rights and release him from the fulfillment of obligations and any any responsibility for any changes in the Photos and any purposes of their use. I confirm my agreement to the fact that I will not have any rights to these Photographs, all rights to these Photographs, including copyright, belong to the Photographer and his Successors. I hereby agree that I will have no right to any additional compensation or compensation, and I agree not to pursue any further claims against the Photographer and his/her Successors for any reason whatsoever, including for defamation and invasion of privacy. life. I confirm my agreement that what is listed and signed in this document is binding on me, my heirs, legal representatives and successors. I confirm that this transfer of rights is final, worldwide and of unlimited duration.",
+      "text3": "\n\tBy signing this document, I confirm that I have reached the age of majority and have the right to act on my behalf. Before signing this document, I have fully and carefully read the contents of this agreement.",
+      "confirm": "Confirm" 
+    },
+    "sign": {
+      "ph": "Photographer's signature",
+      "md": "Model's signature",
+      "clear": "Clear",
+      "next": "Next"
+    },
+    "release": {
+      "name": "Model release",
+      "text1": "\tIn exchange for a valuable and compensatory consideration, which by signing this document is recognized as sufficient and received, I, the Model ",
+      "text2": ", give to the Photographer ",
+      "text3": ", his/her legal representatives and successors, those on whose behalf the Photographer acts, as well as those acting on his/her behalf and with his/her permission, the exclusive and unrestricted right and permission to copyright, in his/her name, and to use, reuse, publish and republish the portraits and other pictures of me or those pictures in which depicted/portrayed by the Photographer (Photographs), in whole or in part, as part of a composite image or in altered form and content, without limitation in the changes permitted to the Photograph.",
+      "text4": "\n\tPhotographs are allowed to be captioned with both my name and a fictitious name, reproductions may be printed in color or monochrome, using the Photographer's equipment or any other equipment, and distributed in any way, for the purpose of illustration, product promotion, as art, in publications, advertising, commerce, publishing and for any other purposes. I also grant the right to use the printed materials in connection with the above purposes. By signing this document, I waive all rights to review and approve the finished product or products, as well as advertising copy and other related materials, or the very purpose for which the photos are used.\n\tBy signing this document, I grant the Photographer, the persons employed by the Photographer, his legal representatives and successors, as well as other persons who are subordinate to the Photographer, or those whose tasks he performs, the stipulated rights and release him from the fulfillment of obligations and any any responsibility for any changes in the Photos and any purposes of their use. I confirm my agreement to the fact that I will not have any rights to these Photographs, all rights to these Photographs, including copyright, belong to the Photographer and his Successors. I hereby agree that I will have no right to any additional compensation or compensation, and I agree not to pursue any further claims against the Photographer and his/her Successors for any reason whatsoever, including for defamation and invasion of privacy. life. I confirm my agreement that what is listed and signed in this document is binding on me, my heirs, legal representatives and successors. I confirm that this transfer of rights is final, worldwide and of unlimited duration.",
+      "text5": "\n\tBy signing this document, I confirm that I have reached the age of majority and have the right to act on my behalf. Before signing this document, I have fully and carefully read the contents of this agreement."
+    },
+    "main": {
+      "save": "Save",
+      "photo": "Model's photo"
     }
   }
   

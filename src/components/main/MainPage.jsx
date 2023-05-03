@@ -4,6 +4,7 @@ import styles2 from "../../index.module.css";
 import MyRelease from "../form/MyRelease";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
+import { useTranslation } from "react-i18next";
 
 const MainPage = ({
   nameOfShoot,
@@ -21,6 +22,8 @@ const MainPage = ({
   signPh,
   signMd,
 }) => {
+  const { t } = useTranslation();
+
   function savePageAsImage() {
     const elemForm = document.getElementById("myForm");
     const hiddenElems = document.querySelectorAll(`.${styles.hide_on_save}`);
@@ -49,34 +52,59 @@ const MainPage = ({
       <div className={cn(styles.info)}>
         <div className={cn(styles.personal__md)}>
           <div className={cn(styles.personal__photo)}>
-            <img src={photoMd} alt="Фото моделі" />
+            <img src={photoMd} alt={t("main.photo")} />
           </div>
           <div className={cn(styles.personal__md_info)}>
-            <span>Модель: {nameMd}</span>
-            <span>Дата народження: {dateOfBirthMd}</span>
-            <span>Місто: {cityMd}</span>
-            <span>Адреса: {adressMd}</span>
-            <span>Серія та номер паспорту: {passportMd}</span>
-            <span>Телефон: {phoneMd}</span>
+            <span>
+              {t("model.name")}: {nameMd}
+            </span>
+            <span>
+              {t("model.date")}: {dateOfBirthMd}
+            </span>
+            <span>
+              {t("model.city")}: {cityMd}
+            </span>
+            <span>
+              {t("model.adress")}: {adressMd}
+            </span>
+            <span>
+              {t("model.passport")}: {passportMd}
+            </span>
+            <span>
+              {t("model.phone")}: {phoneMd}
+            </span>
           </div>
         </div>
 
         <div className={cn(styles.personal__info_shoot)}>
-          <span>Назва фотосесії: {nameOfShoot}</span>
-          <span>Дата фотосесії: {dateOfShoot}</span>
-          <span>Місце фотосесії: {placeOfShoot}</span>
-          <span>Фотограф: {namePh}</span>
-          <span>Телефон: {phonePh}</span>
+          <span>
+            {t("photosession.name")}: {nameOfShoot}
+          </span>
+          <span>
+            {t("photosession.date")}: {dateOfShoot}
+          </span>
+          <span>
+            {t("photosession.place")}: {placeOfShoot}
+          </span>
+          <span>
+            {t("photographer.name")}: {namePh}
+          </span>
+          <span>
+            {t("photographer.phone")}: {phonePh}
+          </span>
         </div>
       </div>
 
       <div className={cn(styles.date_and_sings)}>
-        <div className={cn(styles.date)}>Дата: {dateOfShoot}</div>
-        <div className={cn(styles.sing)}>
-          Підпис фотографа: <img src={signPh} alt="" />
+        <div className={cn(styles.date)}>
+          {" "}
+          {t("photosession.date")}: {dateOfShoot}
         </div>
         <div className={cn(styles.sing)}>
-          Підпис моделі: <img src={signMd} alt="" />
+          {t("sign.ph")}: <img src={signPh} alt="" />
+        </div>
+        <div className={cn(styles.sing)}>
+          {t("sign.md")}: <img src={signMd} alt="" />
         </div>
       </div>
 
@@ -85,7 +113,7 @@ const MainPage = ({
           className={cn(styles.hide_on_save, styles2.btn)}
           onClick={savePageAsImage}
         >
-          Зберегти
+          {t("main.save")}
         </button>
       </div>
     </div>
